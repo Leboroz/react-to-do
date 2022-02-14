@@ -17,14 +17,14 @@ export default function MyInput({ placeholder }) {
 
   return (
     <form onSubmit={submitHandler}>
-      <div>
+      <div className="input">
         <input
           type="text"
           className="input-bar"
           placeholder={placeholder}
           onChange={(e) => setTitle(e.target.value)}
         />
-        <button className="icon__add-button" type="submit">
+        <button className="icon icon__add-button" type="submit">
           <GrAddCircle />
         </button>
       </div>

@@ -17,12 +17,19 @@ export default function NavBar() {
       text: 'About',
     },
   ];
+
   return (
-    <nav className="navbar">
-      <button type="button" onClick={() => setNavbarOpen(!navbarOpen)}>
-        {navbarOpen ? <GiHamburgerMenu /> : <AiFillCloseSquare />}
+    <nav className="navbar-container">
+      <button
+        className="ham"
+        type="button"
+        onClick={() => {
+          setNavbarOpen(!navbarOpen);
+        }}
+      >
+        {!navbarOpen ? <GiHamburgerMenu /> : <AiFillCloseSquare />}
       </button>
-      <ul>
+      <ul className={`navbar${!navbarOpen ? '' : ' open'}`}>
         {links.map((link) => {
           return (
             <li key={link.id}>

@@ -11,16 +11,21 @@ export default function ToDoItem({ title, id }) {
   };
 
   return (
-    <li className="to-do-list__to-do-item">
+    <li className="to-do-items__to-do-item">
       <input
         type="checkbox"
         className="checkbox"
         checked={completed}
         onChange={() => setCompleted(!completed)}
       />
-      <input type="text" value={newTitle} onChange={titleHandler} />
+      <input
+        className="to-do-title"
+        type="text"
+        value={newTitle}
+        onChange={titleHandler}
+      />
       <button
-        className="icon__delete-button"
+        className="icon icon__delete-button"
         type="button"
         onClick={() => deleteItem(id)}
       >

@@ -7,7 +7,6 @@ function App(props) {
         <NavBar />
         <Routes>
           {props.children.map((page, i) => {
-            console.log(page);
             return <Route key={i} path={page.props.path} element={page} />;
           })}
         </Routes>

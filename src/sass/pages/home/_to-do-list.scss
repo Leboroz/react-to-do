@@ -1,0 +1,51 @@
+.to-do-container {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 1rem;
+
+  .icon {
+    background-color: transparent;
+    padding: 0;
+    border: 0;
+    font-size: 25px;
+    * {
+      display: block;
+    }
+
+    &__add-button {
+      position: absolute;
+      top: 50%;
+      right: 0.5rem;
+      transform: translateY(-50%);
+    }
+  }
+
+  .input {
+    position: relative;
+
+    .input-bar {
+      width: 100%;
+      border-radius: 15px;
+      padding: 0.5rem;
+    }
+  }
+
+  .to-do-items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &__to-do-item {
+      width: 100%;
+      display: flex;
+      padding: 0.5rem;
+      align-items: center;
+      justify-content: space-between;
+
+      .to-do-title {
+        width: 100%;
+        border: 0;
+      }
+    }
+  }
+}
