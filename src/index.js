@@ -1,12 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import './sass/index.css';
+import './sass/index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import About from './components/About';
+import ToDoListContainer from './components/ToDoListContainer';
+import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <App>
+        <ToDoListContainer path="/react-to-do/" />
+        <About path="/react-to-do/about" />
+      </App>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
