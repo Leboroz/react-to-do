@@ -1,11 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import { Route, Routes } from 'react-router-dom';
+import NavBar from './components/NavBar';
+function App(props) {
   return (
-    <div className="App">
-      <header className="App-header"></header>
-    </div>
+    <>
+      <div className="app">
+        <NavBar />
+        <Routes>
+          {props.children.map((page, i) => {
+            console.log(page);
+            return <Route key={i} path={page.props.path} element={page} />;
+          })}
+        </Routes>
+      </div>
+      <footer className="footer">footer</footer>
+    </>
   );
 }
 
