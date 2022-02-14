@@ -9,7 +9,10 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1",
+    "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
+    "uuid": "^8.3.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -46,5 +49,8 @@
   "homepage": "https://leboroz.github.io/react-to-do",
   "bugs": {
     "url": "https://github.com/Leboroz/react-to-do/issues"
+  },
+  "devDependencies": {
+    "sass": "^1.49.7"
   }
 }
