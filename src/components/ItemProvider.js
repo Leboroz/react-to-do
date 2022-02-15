@@ -10,11 +10,10 @@ export function ItemProvider({ children }) {
   const [items, setItems] = useState(
     localStorage.getItem('todos')
       ? JSON.parse(localStorage.getItem('todos'))
-      : []
+      : [],
   );
   const addItem = (item) => setItems((todos) => [...todos, item]);
-  const deleteItem = (id) =>
-    setItems((todos) => todos.filter((todo) => todo.id !== id));
+  const deleteItem = (id) => setItems((todos) => todos.filter((todo) => todo.id !== id));
 
   const value = {
     items,

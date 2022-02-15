@@ -1,8 +1,8 @@
+import { useContext, useEffect } from 'react';
 import { ItemContext } from './ItemProvider';
 import ToDoItem from './ToDoItem';
-import { useContext, useEffect } from 'react';
 
-export default function ToDoList({ title }) {
+export default function ToDoList() {
   const { items } = useContext(ItemContext);
 
   useEffect(() => {

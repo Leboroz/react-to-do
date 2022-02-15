@@ -1,9 +1,8 @@
-import ToDoItem from './ToDoItem';
-import { useEffect, useContext } from 'react';
-import { ItemContext } from './ItemProvider';
+import { useContext, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import { useState } from 'react';
+
 import { GrAddCircle } from 'react-icons/gr';
+import { ItemContext } from './ItemProvider';
 
 export default function MyInput({ placeholder }) {
   const { addItem } = useContext(ItemContext);

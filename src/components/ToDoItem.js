@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
-import { ItemContext } from './ItemProvider';
 import { RiDeleteBin2Line } from 'react-icons/ri';
+import { ItemContext } from './ItemProvider';
 
 export default function ToDoItem({ title, id }) {
   const [completed, setCompleted] = useState(false);

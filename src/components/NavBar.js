@@ -30,13 +30,11 @@ export default function NavBar() {
         {!navbarOpen ? <GiHamburgerMenu /> : <AiFillCloseSquare />}
       </button>
       <ul className={`navbar${!navbarOpen ? '' : ' open'}`}>
-        {links.map((link) => {
-          return (
-            <li key={link.id}>
-              <Link to={link.path}>{link.text}</Link>
-            </li>
-          );
-        })}
+        {links.map((link) => (
+          <li key={link.id}>
+            <Link to={link.path}>{link.text}</Link>
+          </li>
+        ))}
       </ul>
     </nav>
   );

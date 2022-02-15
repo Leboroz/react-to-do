@@ -1,14 +1,16 @@
 import { Route, Routes } from 'react-router-dom';
+import { v4 as uuidv4 } from 'uuid';
 import NavBar from './components/NavBar';
-function App(props) {
+
+function App({ children }) {
   return (
     <>
       <div className="app">
         <NavBar />
         <Routes>
-          {props.children.map((page, i) => {
-            return <Route key={i} path={page.props.path} element={page} />;
-          })}
+          {children.map((page) => (
+            <Route key={uuidv4()} path={page.props.path} element={page} />
+          ))}
         </Routes>
       </div>
       <footer className="footer">footer</footer>
