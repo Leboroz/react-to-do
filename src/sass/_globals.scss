@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 60px);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: flex-end;
+
+  .ham {
+    border: 0;
+    background-color: transparent;
+    font-size: 30px;
+    margin-top: 5px;
+    margin-right: 5px;
+  }
+
+  .navbar {
+    position: fixed;
+    z-index: 10;
+    background-color: #fff;
+    transform: translateX(-100%);
+    width: 100%;
+    height: 100%;
+    transition: transform 500ms ease;
+    margin-top: 50px;
+
+    &.open {
+      transform: translateX(0);
+    }
+  }
+}
+
+.footer {
+  height: 60px;
+}
